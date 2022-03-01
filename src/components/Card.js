@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Card = ({name, description, type, id}) => {
+const Card = ({name, type, id}) => {
     const path = `/assets/${type}-${id}.png`
 
 
@@ -13,7 +13,7 @@ const Card = ({name, description, type, id}) => {
    <div className="card-body">
         <h3 className="card.title">{name}</h3>
         <p className="card-text">
-            <Link className="card-link" to={""}>
+            <Link className="card-link" to={`/character/${id}`}>
             Ver Mas...            
             </Link>        
         </p>   
