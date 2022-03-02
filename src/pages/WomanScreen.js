@@ -1,8 +1,24 @@
 import React from 'react'
+import Card from '../components/Card'
+import { Characters } from '../models/Characters'
 
 const WomanScreen = () => {
+  const womans = Characters.filter(character => character.type === "m")
+
+
   return (
-    <div>WomanScreen</div>
+    <div className='container mt-3'>
+    <h1>Womans</h1>
+    <div className='row'> 
+        {
+            womans.map((woman) => (
+            <Card key={woman.id} {...woman} />
+        ))}  
+    
+    </div>
+
+    
+    </div>
   )
 }
 

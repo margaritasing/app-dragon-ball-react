@@ -5,9 +5,9 @@ const Card = ({name, type, id}) => {
     const path = `/assets/${type}-${id}.png`
 
 
-  return   <div className="card m-3 col-12 col-md-4" 
+  return  ( <div className="card m-3 col-12 col-md-4" 
   style={{
-      width: 200,
+      width: 250,
   }} > 
    <img  className="card-img-top" src={path} alt={id} />
    <div className="card-body">
@@ -20,6 +20,7 @@ const Card = ({name, type, id}) => {
    </div>
   
   </div>
+  )
   
 }
 
