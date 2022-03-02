@@ -29,7 +29,7 @@ export const Characters = [
       description: "Enemigo en la saga de Buu en DB Z",
       type: "h",
     },
-    {
+    /* {
       id: "super_buu",
       name: "Super Majin Buu",
       description: "Enemigo en la saga de Buu en DB Z",
@@ -46,7 +46,7 @@ export const Characters = [
       name: "Kid Majin Buu",
       description: "Enemigo en la saga de Buu en DB Z",
       type: "h",
-    },
+    }, */
     {
       id: "piccolo",
       name: "Piccolo",
