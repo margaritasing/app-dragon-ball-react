@@ -1,23 +1,25 @@
-import React from 'react'
+import React, {lazy, Suspense }from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import CharacterScreen from '../pages/CharacterScreen'
-import ManScreen from '../pages/ManScreen'
-import SearchScreen from '../pages/SearchScreen'
-import WomanScreen from '../pages/WomanScreen'
+import Loading from '../components/Loading'
+ import Navbar from '../components/Navbar'
+const CharacterScreen = lazy(()=> import('../pages/CharacterScreen'))
+const ManScreen = lazy(()=> import('../pages/ManScreen'))
+const SearchScreen = lazy(()=> import('../pages/SearchScreen'))
+const WomanScreen = lazy(()=> import('../pages/WomanScreen'))
 
 const AppRouter = () => {
   return (
     <>
     <Navbar />
-        <Switch> 
+    <Suspense fallback={<Loading/>}>
+        <Switch>
             <Route exact path="/mans" component={ManScreen} />
             <Route exact path="/womans" component={WomanScreen} />
             <Route exact path="/Search" component={SearchScreen} /> 
             <Route exact path="/character/:id" component={CharacterScreen} /> 
-              
-          {/* <Redirect to="/mans"/>*/}    
+            <Redirect to="/mans"/>    
         </Switch>   
+    </Suspense>
     </>
   )
 }
