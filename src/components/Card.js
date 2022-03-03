@@ -9,7 +9,7 @@ const Card = ({name, type, id}) => {
   style={{
       width: 250,
   }} > 
-   <img  className="card-img-top" src={path} alt={id} />
+   <img loading="lazy" className="card-img-top" src={path} alt={id} />
    <div className="card-body">
         <h3 className="card.title">{name}</h3>
         <p className="card-text">
