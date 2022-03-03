@@ -2,6 +2,9 @@
   "name": "app-dragon-ball",
   "version": "0.1.0",
   "private": true,
+  "reactSnap": {
+    "inlineCss": true
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^11.2.7",
@@ -29,6 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

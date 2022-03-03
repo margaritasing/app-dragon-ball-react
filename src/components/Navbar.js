@@ -15,11 +15,11 @@ const Navbar = () => {
         history.replace("/login")
     }
   return (
-    <nav className="navbar navbar-expand-lg navbar-info bg-info">
+    <nav className="navbar navbar-expand-lg navbar-light bg-info">
     <div className="container-fluid">
       <h2 className="navbar-brand text-white">Db App</h2>
-      <button className="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon bg-dark" />
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse offset-8" id="navbarNav">
         <ul className="navbar-nav ">
