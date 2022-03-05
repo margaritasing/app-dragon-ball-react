@@ -1,18 +1,17 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { authTypes } from '../types/authTypes';
 
 const Navbar = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const {dispatch} = useContext(AuthContext)
 
     const handleLogout = () =>{
         dispatch({type:authTypes.logout})
         
-        history.replace("/login")
+        navigate("/login")
     }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
@@ -24,13 +23,13 @@ const Navbar = () => {
       <div className="collapse navbar-collapse offset-8" id="navbarNav">
         <ul className="navbar-nav ">
           <li className="nav-item ">
-            <NavLink activeClassName="active text-white" className="nav-link" aria-current="page" to="./mans" >Mans</NavLink>
+            <NavLink  className={({isActive}) => `nav-link ${isActive ? 'active text-white' : ''}`} aria-current="page" to="./mans" >Mans</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink activeClassName="active text-white"  className="nav-link" to="./womans">Womans</NavLink>
+            <NavLink   className={({isActive}) => `nav-link ${isActive ? 'active text-white' : ''}`} to="./womans">Womans</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink activeClassName="active text-white" className="nav-link" to="./Search">Search</NavLink>
+            <NavLink className={({isActive}) => `nav-link ${isActive ? 'active text-white' : ''}`} to="./Search">Search</NavLink>
           </li>         
         </ul>
         <div className='d-flex'>
